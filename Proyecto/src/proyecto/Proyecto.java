@@ -4,6 +4,8 @@
  */
 package proyecto;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author mumir
@@ -14,7 +16,14 @@ public class Proyecto {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Cola cola = new Cola();
+        
+        cola.asignar("Juliana", "1", 25, "Depositos", "P", "horaCreacion", -1);
+        cola.asignar("Allan", "2", 42, "Retiros", "A", "horaCreacion", -1);
+        cola.asignar("Jonathan", "3", 37, "Cambio de Divisas", "B", "horaCreacion", -1);
+        cola.asignar("Maria", "4", 18, "Retiros", "P", "horaCreacion", -1);
+        
+        JOptionPane.showMessageDialog(null, cola);
     }
-    
 }
+
