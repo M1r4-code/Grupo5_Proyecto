@@ -59,9 +59,15 @@ public class Cola {
                     actual = actual.getSig();
                 }
                 //Se inserta en la posicion encontrada. 
-                nuevo.setSig(actual.getSig());
+                nuevo.setSig( actual.getSig() );
                 actual.setSig(nuevo);
+                
+                //Si queda al final se actualiza ult. Indicandole que el nuevo que se acaba de crear va de ultimo.  
+                if (nuevo.getSig() == null){
+                    ult = nuevo;
+                }
             }
+            JOptionPane.showMessageDialog(null, nuevo + " usted será atendido en la caja 1. \nHay " + cantClientes + " clientes adelante suyo.");
         }
         cantClientes += 1;
     }
