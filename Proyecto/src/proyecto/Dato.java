@@ -5,11 +5,11 @@ public class Dato {
     private String id;
     private int edad;
     private String tramite;
-    private String tipo; 
+    private TipoCliente tipo; 
     private String horaCreacion;
     private int horaAtencion;
 
-    public Dato(String nombre, String id, int edad, String tramite, String tipo, String horaCreacion, int horaAtencion) {
+    public Dato(String nombre, String id, int edad, String tramite, TipoCliente tipo, String horaCreacion, int horaAtencion) {
         this.nombre = nombre;
         this.id = id;
         this.edad = edad;
@@ -51,11 +51,11 @@ public class Dato {
         this.tramite = tramite;
     }
 
-    public String getTipo() {
+    public TipoCliente getTipo() {
         return tipo;
     }
 
-    public void setTipo(String tipo) {
+    public void setTipo(TipoCliente tipo) {
         this.tipo = tipo;
     }
 

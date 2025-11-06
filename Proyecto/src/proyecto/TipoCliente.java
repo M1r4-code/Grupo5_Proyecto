@@ -8,6 +8,8 @@ package proyecto;
  *
  * @author mumir
  */
-public class TipoCliente {
-    
+public enum TipoCliente {
+    P,
+    A,
+    B
 }
