@@ -32,19 +32,19 @@ public class Cola {
         }
     }
     
-    //Encolar TODO añadir prioridad. 
+    //Encolar
     public void asignar(String nombre, String id, int edad, String tramite, TipoCliente tipo, String horaCreacion, int horaAtencion){
         Nodo nuevo=new Nodo(new Dato(nombre, id, edad, tramite, tipo, horaCreacion, horaAtencion));
         if (esVacia()) {
             prim=ult=nuevo;
             JOptionPane.showMessageDialog(null, nuevo + " es su turno. Pase a la caja 1 para ser atendido");
         } else {
-            //Codigo de cola normal, descomentar si es necesario.
+            //**Codigo de cola normal, descomentar si es necesario.**//
             //ult.setSig(nuevo);
             //ult=nuevo;
             //JOptionPane.showMessageDialog(null, nuevo + " usted será atendido en la caja 1. \nHay " + cantClientes + " clientes adelante suyo.");
             
-            
+            //**Nuevo codigo con prioridad**//
             //Recorrer cola para encontrar su lugar.
             //Toma el valor del cliente actual y lo compara con el primero en la cola
             if( PrioridadValor(tipo) < PrioridadValor( prim.getDato().getTipo() ) ){
