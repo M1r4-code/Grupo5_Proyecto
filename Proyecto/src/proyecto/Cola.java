@@ -18,6 +18,9 @@ public class Cola {
         return prim==null;
     }
     
+    
+    
+    //Encolar TODO añadir prioridad. 
     public void asignar(String nombre, String id, int edad, String tramite, String tipo, String horaCreacion, int horaAtencion){
         Nodo nuevo=new Nodo(new Dato(nombre, id, edad, tramite, tipo, horaCreacion, horaAtencion));
         if (esVacia()) {
@@ -30,6 +33,7 @@ public class Cola {
         }
         cantClientes += 1;
     }
+    
 
     @Override
     public String toString() {
