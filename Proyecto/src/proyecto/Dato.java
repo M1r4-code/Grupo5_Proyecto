@@ -6,8 +6,8 @@ public class Dato {
     private int edad;
     private String tramite;
     private TipoCliente tipo; 
-    private String horaCreacion;
-    private int horaAtencion;
+    private String horaCreacion; //Change to Local Date Time
+    private int horaAtencion; //Change to Local Date Time
 
     public Dato(String nombre, String id, int edad, String tramite, TipoCliente tipo, String horaCreacion, int horaAtencion) {
         this.nombre = nombre;
@@ -15,8 +15,8 @@ public class Dato {
         this.edad = edad;
         this.tramite = tramite;
         this.tipo = tipo;
-        this.horaCreacion = horaCreacion;
-        this.horaAtencion = horaAtencion;
+        this.horaCreacion = horaCreacion;//Local date time now
+        this.horaAtencion = horaAtencion;// Dejar null
     }
 
     public String getNombre() {
