@@ -22,7 +22,12 @@ public class Proyecto {
         cola.asignar("Allan", "2", 42, "Retiros", TipoCliente.A, "horaCreacion", -1);
         cola.asignar("Jonathan", "3", 37, "Cambio de Divisas", TipoCliente.B, "horaCreacion", -1);
         cola.asignar("Maria", "4", 18, "Retiros", TipoCliente.P, "horaCreacion", -1);
-        
+        JOptionPane.showMessageDialog(null, cola);
+
+        cola.TiqueteAtendido();
+        JOptionPane.showMessageDialog(null, cola);
+
+        cola.TiqueteAtendido();
         JOptionPane.showMessageDialog(null, cola);
     }
 }

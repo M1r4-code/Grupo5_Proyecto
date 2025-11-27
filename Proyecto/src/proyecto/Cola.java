@@ -6,6 +6,7 @@ package proyecto;
 
 import javax.swing.JOptionPane;
 import static proyecto.TipoCliente.P;
+import java.time.LocalDateTime;
 
 /**
  *
@@ -14,6 +15,7 @@ import static proyecto.TipoCliente.P;
 public class Cola {
     private Nodo prim, ult;
     private int cantClientes = 0;
+    LocalDateTime hora = LocalDateTime.now();
     
     public boolean esVacia() {
         return prim==null;
@@ -71,7 +73,22 @@ public class Cola {
         }
         cantClientes += 1;
     }
-    
+
+    //Atender
+    public void TiqueteAtendido() {
+        if (esVacia()) {
+            JOptionPane.showMessageDialog(null, "Error, nombres no encontrados");
+        } else {
+            if (prim==null) {
+                prim.getDato().setHoraAtencion(hora); //Cuando se atiende, se asigna la hora actual a HoraAtencion
+                prim=ult=null;
+            } else {
+                prim=prim.getSig();
+                prim.getDato().setHoraAtencion(hora);
+                JOptionPane.showMessageDialog(null, "Es su turno de ser atendido, pase a la caja, " + prim); //Mensaje para indicarle al cliente que es su turno
+            }
+        }
+    }
 
     @Override
     public String toString() {

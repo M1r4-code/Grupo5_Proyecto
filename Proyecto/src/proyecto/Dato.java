@@ -1,13 +1,15 @@
 package proyecto;
 
+import java.time.LocalDateTime;
+
 public class Dato {
     private String nombre;
     private String id;
     private int edad;
     private String tramite;
     private TipoCliente tipo; 
-    private String horaCreacion; //Change to Local Date Time
-    private int horaAtencion; //Change to Local Date Time
+    private LocalDateTime horaCreacion; 
+    private LocalDateTime horaAtencion;
 
     public Dato(String nombre, String id, int edad, String tramite, TipoCliente tipo, String horaCreacion, int horaAtencion) {
         this.nombre = nombre;
@@ -15,9 +17,8 @@ public class Dato {
         this.edad = edad;
         this.tramite = tramite;
         this.tipo = tipo;
-        this.horaCreacion = horaCreacion;//Local date time now
-        this.horaAtencion = horaAtencion;// Dejar null
-    }
+        this.horaCreacion = LocalDateTime.now();
+        this.horaAtencion = null;
 
     public String getNombre() {
         return nombre;
@@ -59,19 +60,19 @@ public class Dato {
         this.tipo = tipo;
     }
 
-    public String getHoraCreacion() {
+    public LocalDateTime getHoraCreacion() {
         return horaCreacion;
     }
 
-    public void setHoraCreacion(String horaCreacion) {
+    public void setHoraCreacion(LocalDateTime horaCreacion) {
         this.horaCreacion = horaCreacion;
     }
 
-    public int getHoraAtencion() {
+    public LocalDateTime getHoraAtencion() {
         return horaAtencion;
     }
 
-    public void setHoraAtencion(int horaAtencion) {
+    public void setHoraAtencion(LocalDateTime horaAtencion) {
         this.horaAtencion = horaAtencion;
     }
 
