@@ -11,15 +11,15 @@ import javax.swing.JOptionPane;
  * @author mumir
  */
 public class Login {
-    private String nombre;
+    private String nombreUsuario;
     private String contraseña;
 
     public String getNombre() {
-        return nombre;
+        return nombreUsuario;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.nombreUsuario = nombre;
     }
 
     public String getContraseña() {
@@ -36,7 +36,7 @@ public class Login {
         String username =  JOptionPane.showInputDialog("Ingrese su nombre de usuario:");
         String usercont = JOptionPane.showInputDialog("Ingrese su contraseña:");
         
-        if(username.equals(nombre) && usercont.equals(contraseña)){
+        if(username.equals(nombreUsuario) && usercont.equals(contraseña)){
             JOptionPane.showMessageDialog(null, "Bienvenido.");
         } else {
             JOptionPane.showMessageDialog(null, "Error: Usuario o contraseña incorrectos.");
