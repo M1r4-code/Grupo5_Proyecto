@@ -16,19 +16,9 @@ public class Proyecto {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Cola cola = new Cola();
+        Login menu = new Login();
         
-        cola.asignar("Juliana", "1", 25, "Depositos", TipoCliente.P, "horaCreacion", -1);
-        cola.asignar("Allan", "2", 42, "Retiros", TipoCliente.A, "horaCreacion", -1);
-        cola.asignar("Jonathan", "3", 37, "Cambio de Divisas", TipoCliente.B, "horaCreacion", -1);
-        cola.asignar("Maria", "4", 18, "Retiros", TipoCliente.P, "horaCreacion", -1);
-        JOptionPane.showMessageDialog(null, cola);
-
-        cola.TiqueteAtendido();
-        JOptionPane.showMessageDialog(null, cola);
-
-        cola.TiqueteAtendido();
-        JOptionPane.showMessageDialog(null, cola);
+        menu.MenuLogin();
     }
 }
 

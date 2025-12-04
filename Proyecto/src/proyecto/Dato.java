@@ -11,7 +11,7 @@ public class Dato {
     private LocalDateTime horaCreacion; 
     private LocalDateTime horaAtencion;
 
-    public Dato(String nombre, String id, int edad, String tramite, TipoCliente tipo, String horaCreacion, int horaAtencion) {
+    public Dato(String nombre, String id, int edad, String tramite, TipoCliente tipo) {
         this.nombre = nombre;
         this.id = id;
         this.edad = edad;
@@ -19,6 +19,7 @@ public class Dato {
         this.tipo = tipo;
         this.horaCreacion = LocalDateTime.now();
         this.horaAtencion = null;
+    }
 
     public String getNombre() {
         return nombre;

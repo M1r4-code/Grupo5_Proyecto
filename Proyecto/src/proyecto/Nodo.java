@@ -34,6 +34,6 @@ public class Nodo {
 
     @Override
     public String toString() {
-        return "Nombre: " + dato;
+        return "" + dato;
     }
 }
